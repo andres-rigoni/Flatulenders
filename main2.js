@@ -513,7 +513,7 @@ async function createProduct(){
     setCell("productos", lineNow, "B", productPrice);
     setCell("productos", lineNow, "C", currentData[0]);
     setCell("productos", lineNow, "D", productDiscount);
-    setCell("productos", lineNow, "E", productImg;
+    setCell("productos", lineNow, "E", productImg);
 }
 
 function closeSection(title){
