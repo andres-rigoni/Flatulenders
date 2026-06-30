@@ -1,0 +1,717 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+div{
+    display: inline-block;
+}
+header{
+    background: black;
+    color: white;
+    text-shadow: 0 0 2vh white;
+    width: 100vw;
+    height: 10vh;
+    box-shadow: 0 0 3vh black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.titleImg{
+    height: 10vh;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+}
+.cuentaImg{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background: lightblue;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: .1s;
+}
+.nav > li{
+    cursor: pointer;
+    transition: .1s;
+    list-style-type: none;
+}
+.nav > li:hover, .producto > button:hover, .publishBtn:hover, .addProductBtn:hover, .socialBtnAccept:hover, .socialBtnRemove:hover, .inicioBienvenidaExplorarBtn:hover, .cuentaImg:hover, .settingsAccount > button:hover, .backToAccount:hover, .registrarseBtn:hover{
+    transform: scale(1.1);
+}
+.nav > li:active, .producto > button:active, .publishBtn:active, .addProductBtn:active, .socialBtnAccept:active, .socialBtnRemove:active, .inicioBienvenidaExplorarBtn:active, .cuentaImg:active, .settingsAccount > button:active, .backToAccount:active, .registrarseBtn:active{
+    transform: scale(0.95);
+}
+.nav > li::selection{
+    background: none;
+}
+.section{
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 3vh;
+    box-shadow: 0 0 70vw black;
+    overflow: hidden;
+}
+.sectionTitle{
+    display: flex;
+    background: black;
+    color: white;
+    text-shadow: 0 0 1vh white;
+    height: 5vh;
+    width: 100%;
+    box-shadow: 0 0 3vh black;
+    padding-left: 2vw;
+    align-items: center;
+    justify-content: space-between;
+}
+.sectionClose{
+    margin-right: 3vw;
+    cursor: pointer;
+}
+.profileAccount{
+    width: 30vh;
+    height: 30vh;
+    position: absolute;
+    top: 8vh;
+    border: 3px solid black;
+    box-shadow: 0 0 3vh black;
+    border-radius: 50%;
+    margin-left: 3vw
+}
+.nameAccount{
+    width: 30vh;
+    height: 7vh;
+    position: absolute;
+    left: 3vw;
+    top: 42vh;
+    text-align: center;
+}
+.settingsAccount{
+    border: 1px solid black;
+    width: 40vw;
+    height: 50vh;
+    position: absolute;
+    margin: auto;
+    right: 3vw;
+    top: 10vh;
+}
+.settingsAccount > button{
+    width: 30vw;
+    height: 8vh;
+    margin: 4vh 10vh;
+    cursor: pointer;
+    transition: .1s;
+}
+.saldoTxt{
+    height: 3vh;
+    width: 10vw;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 2vh;
+}
+.userRegistrarseText{
+    position: absolute;
+    width: 50vw;
+    height: 8vh;
+    border: 1px solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.passwordRegistrarseText{
+    position: absolute;
+    width: 50vw;
+    height: 8vh;
+    border: 1px solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.registrarseBtn{
+    position: absolute;
+    width: 50vw;
+    height: 8vh;
+    border: 1px solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    transition: .1s;
+}
+.backToAccount{
+    position: absolute;
+    left: 2vh;
+    top: 7vh;
+    cursor: pointer;
+    transition: .1s;
+}
+.userLoginText{
+    position: absolute;
+    width: 50vw;
+    height: 8vh;
+    border: 1px solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.passwordLoginText{
+    position: absolute;
+    width: 50vw;
+    height: 8vh;
+    border: 1px solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.loginBtn{
+    position: absolute;
+    width: 50vw;
+    height: 8vh;
+    border: 1px solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    transition: .1s;
+}
+.actualPasswordText{
+    position: absolute;
+    width: 30vw;
+    height: 8vh;
+    border: 1px solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.newPasswordText{
+    position: absolute;
+    width: 30vw;
+    height: 8vh;
+    border: 1px solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.changePasswordBtn{
+    position: absolute;
+    width: 30vw;
+    height: 8vh;
+    border: 1px solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 30vh;
+}
+.contenido{
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: black;
+    border-top: 3px solid darkslategray;
+}
+section{
+    width: 90vw;
+    height: 40vh;
+    border: 5px solid #00f7ff;
+    background: #272727;
+    color: white;
+    margin: 5vw;
+}
+.tematicaTitulo{
+    text-shadow: 0 0 1vh #00f7ff;
+}
+.tematicaProductosCont{
+    border: 1px solid white;
+    width: 80vw;
+    height: 35vh;
+    margin-left: 3vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.inputFoto{
+    position: absolute;
+    left: 1vw;
+    bottom: 1vh;
+}
+.rolTxt{
+    font-weight: bold;
+    margin: 2vh 0 0 13vh;
+}
+.requestDiv{
+    width: 50vw;
+    height: 8vh;
+    border: 1px solid black;
+}
+.inicioBienvenida{
+    width: 50vw;
+    height: 17vh;
+    color: white;
+    border: 1px solid darkslategray;
+    border-radius: 1.5vh;
+    position: absolute;
+    top: 2vh;
+    left: 4vh;
+    padding: 3vh 3vw;
+    font-size: 2.5vh;
+}
+.inicioBienvenida > p{
+    color: lightgray;
+    font-size: 2vh;
+    width: 24vw;
+    margin-top: 2vh;
+}
+.inicioBienvenidaLogo{
+    height: 20vh;
+    position: absolute;
+    right: 1vw;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    border-radius: 3vh;
+}
+.inicioBienvenidaExplorarBtn{
+    width: 15vw;
+    height: 4.5vh;
+    border: 1px solid #77d9fa;
+    color: #77d9fa;
+    border-radius: 1vh;
+    background: black;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2vh;
+    left: 2.67vw;
+    transition: .2s ease;
+}
+.inicioBienvenidaFlechita{
+    margin-left: 1vw;
+}
+.inicioNav{
+    width: 54vw;
+    height: 19vh;
+    border: 1px solid darkslategray;
+    color: #77d9fa;
+    border-radius: 1vh;
+    position: absolute;
+    left: 4vh;
+    top: 27vh;
+    padding: 1vh 1vw;
+}
+.inicioNavItem{
+    width: 15vw;
+    height: 16vh;
+    border: 1px solid darkslategray;
+    border-radius: 1vh;
+    color: white;
+}
+.inicioNavItemsCont{
+    width: 50vw;
+    height: 16vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inicioNavLogo{
+    height: 5vh;
+    position: absolute;
+    margin: 1vh;
+}
+.inicioNavItem > h3{
+    font-size: 2vh;
+    position: absolute;
+    margin: 2vh 4vw;
+}
+.inicioNavItem > p{
+    color: lightgray;
+    font-size: 1.5vh;
+    width: 10vw;
+    margin: 5vh 4vw
+}
+.inicioNavItem > button{
+    border: 1px solid #77d9fa;
+    color: white;
+    background: black;
+    width: 10vw;
+    height: 4vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: .2 ease;
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 3vh 4vw;
+    color: #77d9fa;
+    font-size: 1.5vh;
+}
+.inicioNavItemsBtn{
+    position: relative;
+    right: 1vw;
+}
+.inicioNavItemsFlechita{
+    position: absolute;
+    right: 1vw;
+}
+.inicioPromociones{
+    color: #77d9fa;
+    border: 1px solid darkslategray;;
+    border-radius: 1vh;
+    width: 47vw;
+    height: 30vh;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 50vw;
+    top: 50vh;
+}
+.inicioProductos{
+    color: #77d9fa;
+    border: 1px solid darkslategray;;
+    border-radius: 1vh;
+    width: 47vw;
+    height: 30vh;
+    position: absolute;
+    margin: auto;
+    left: 50vw;
+    right: 0;
+    top: 50vh;
+}
+footer{
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #343434);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: monospace;
+}
+.socialRequestImg{
+    height: 5vh;
+    width: 5vh;
+    border-radius: 25%;
+}
+.requestsCont{
+    width: 60vw;
+    height: 50vh;
+    border: 1px solid black;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.socialBtnRemove{
+    position: absolute;
+    right: 2.5vw;
+    margin-top: 2vh;
+    background: none;
+    font-size: 3vh;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.socialBtnAccept{
+    position: absolute;
+    right: 15vw;
+    background: none;
+    font-size: 2vh;
+    box-shadow: 1vh 1vh 1vh black;
+    margin-top: 2vh;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.socialRequestImg{
+    margin-top: 1.5vh;
+    margin-left: 1vw;
+}
+.socialRequestName{
+    position: relative;
+    bottom: 1.5vh;
+    left: 2vw;
+    font-family: monospace;
+    font-size: 2vh;
+}
+.addProductBtn{
+    width: 7vh;
+    height: 7vh;
+    background: #77d9fa;
+    border-radius: 50%;
+    font-size: 6vh;
+    color: white;
+    position: fixed;
+    bottom: 10vh;
+    right: 5vh;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.newProductNameText{
+    margin: 4vh;
+}
+.newProductPriceText{
+    margin: 4vh;
+}
+.newProductDiscountText{
+    margin: 4vh;
+}
+.newProductImgText{
+    margin: 4vh;
+}
+.inicioAccount{
+    position: absolute;
+    width: 37vw;
+    height: 46vh;
+    border: 1px solid #343434;
+    border-radius: 1vh;
+    right: 2vw;
+    top: 2vh;
+    background: black;
+}
+.inicioAccount > h2{
+    color: white;
+    font-size: 2.5vh;
+    margin: 2vh 2vw;
+}
+.inicioAccountImg{
+    filter: invert(100%);
+    height: 4vh;
+    box-shadow: 0 0 3vh white;
+    position: relative;
+    top: 1vh;
+}
+.inicioAccountRol{
+    background: #77d9fa;
+    border-radius: 2vh;
+    color: black;
+    padding: .5vh 1vw;
+}
+.barritaLateral{
+    height: 40vh;
+    width: 5px;
+    background: #77d9fa;
+    box-shadow: 0 0 3vh #77d9fa;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.inicioAccount > p{
+    font-size: 2vh;
+    color: lightgray;
+    margin-left: 2vw;
+}
+.inicioAccount > ul{
+    color: lightgray;
+    font-size: 2vh;
+    margin-left: 4vw;
+    margin-top: 1.5vh;
+}
+.inicioAccount > ul > li{
+    line-height: 2;
+}
+.inicioAccountBtn{
+    width: 15vw;
+    height: 7vh;
+    border: 2px solid #77d9fa;
+    position: absolute;
+    background: none;
+    border-radius: 1vh;
+    color: #77d9fa;
+    position: absolute;
+    bottom: 2vh;
+    margin: auto;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+.inicioAccountFlechita{
+    margin-left: 2vw;
+}
+.producto{
+    width: 20vh;
+    height: 27vh;
+    border: 1px solid #77d9fa;
+    border-radius: 1vh;
+    margin: 1vh;
+}
+.producto > h2{
+    color: white;
+    font-size: 2.25vh;
+    margin-left: .5vw;
+}
+.publishBtn{
+    background: #77d9fa;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 2vh;
+    padding: 1vh 2vh;
+    box-shadow: 1vh 1vh 1vh black;
+    position: absolute;
+    bottom: 6vh;
+    right: 4vw;
+}
+.producto > img{
+    width: 8vw;
+    height: 8vw;
+    border-radius: 1vh;
+    margin-left: 1.5vw;
+    margin-top: 1vh;
+}
+.producto > p{
+    font-size: 2vh;
+    color: white;
+    margin: .5vh .5vw;
+}
+.producto > button{
+    color: #77d9fa;
+    background: none;
+    border: 1px solid #77d9fa;
+    border-radius: .5vh;
+    font-size: 2vh;
+    width: 8vw;
+    height: 4vh;
+    margin: 0 1.5vw;
+    cursor: pointer;
+    transition: .1s;
+}
+.productoVistaImg{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 2vh;
+    position: absolute;
+    top: 5vh;
+    left: 3vw;
+}
+.productoVistaPrecio{
+    font-size: 4vh;
+    color: white;
+    position: absolute;
+    left: 5vw;
+    bottom: 15vh;
+}
+.productoVistaNombre{
+    font-size: 5vh;
+    color: white;
+    width: 60vw;
+    position: absolute;
+    right: 1vh;
+    top: 5vh
+}
+.productoVistaProveedor{
+    color: lightgray;
+    font-size: 3vh;
+    position: absolute;
+    left: 39vw;
+    top: 12.5vh
+}
+.productoVistaLista{
+    color: white;
+    font-size: 3vh;
+    position: absolute;
+    left: 39vw;
+    top: 30vh;
+}
+.productoVistaLista > li{
+    margin-bottom: 3vh;
+}
+.productoVistaComprar{
+    background: #77d9fa;
+    color: black;
+    border-radius: 3vh;
+    font-size: 3vh;
+    width: 20vw;
+    height: 8vh;
+    border: none;
+    position: absolute;
+    left: 39vw;
+    bottom: 14vh;
+    font-weight: bolder;
+}
+.productoVistaComprar:hover{
+    opacity: .8;
+}
+.productoVistaComprar:active{
+    opacity: 1;
+    background: lightblue;
+}
+.productoVistaSaldo{
+    color: white;
+    font-size: 3vh;
+    position: absolute;
+    right: 10vw;
+    bottom: 16vh;
+}
+.ingresarDineroBtn{
+    position: absolute;
+    bottom: 1vh;
+}
+.mercadoPagoAclaracion{
+    position: absolute;
+    bottom: 1vh;
+    right: 2vw;
+}
+.saldoEnSocial{
+    position: absolute;
+    bottom: 1vh;
+    left: 35vw;
+}
+.tematicaProductosCont{
+    width: 40vw;
+    height: 28vh;
+}
